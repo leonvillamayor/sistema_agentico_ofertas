@@ -1,0 +1,4 @@
+Necesitamos que analices la documentación de claude code de forma exhaustiva y minuciosa. El objetivo es que obtengas una a una las funcionalidades de claude code y generes un documento markdown en
+en Documentacion/capacidades.md que describa una a una las funcionalidades de claude code segun la documentación. Cuando termimes, volveras a consultar la documentación de claude code y el documento 
+Documentacion/capacidades.md y verificaras que todas las funcionalidades de claude code esta incluidas en el documento Documentacion/capacidades.md. Realizaras esta tarea hasta que quede verificado
+que todas las funcionalidades de claude code estan incluidas en el documento. 

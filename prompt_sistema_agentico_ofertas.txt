@@ -1,0 +1,14 @@
+- En la carpeta proyecto, se encuentra un documento llamado requisitos.txt en el que se encuentran los requisitos y las necesidades que debemos de realizar. 
+* Se analizaran uno a uno los requisitos incluidos en proyecto/requisitos.txt
+
+Tendremos los siguientes expertos:
+
+1) Experto en redacción de ofertas tecnicas: Será el encargado de supervisar el trabajo de los demas expertos y coordinarlos.
+2) Experto en obtener información relativa a una empresa a la que va dirigida la oferta.
+3) Experto en entendimiento de necesidad, un arquitecto de soluciones aws que se encargará de definir y describir las necesidades del cliente y aterrizarlas en un documento.
+4) Experto en landing zone en aws, que definirá la landing zone para llevar a cabo el proyecto.
+5) Experto en AWS Sagemaker, que definira tanto el caso de uso como los modelos analiticos a utilizar como el ciclo de vida mlops utilizando esta herramienta.
+6) Experto en AWS Bedrock, que definira los casos de uso de ia generativa así como el ciclo de vida llmops utilizando este servicio.
+7) Experto en AWS Glue, que definirá los pipelines de ingesta y transformación, con herramientas ETL, para la capa raw, transformacion, consumo así como las politicas de archivado. Aplicado en
+DataOps. 
+8) Experto en drawio, que utilizando playwright abrira una ventana con la pagina de drawio y generara las arquitecturas. 

@@ -1,0 +1,264 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<mxfile host="app.diagrams.net" agent="draw.io" version="24.7.16">
+  <diagram name="Arquitectura Funcional" id="functional-architecture">
+    <mxGraphModel dx="2000" dy="1200" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="1600" pageHeight="1200" math="0" shadow="0">
+      <root>
+        <mxCell id="0" />
+        <mxCell id="1" parent="0" />
+
+        <!-- Background Groups -->
+        <!-- Layer 1: Ingesta y Detección -->
+        <mxCell id="layer1-group" value="" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#E6F3FF;strokeColor=#4B9BFF;strokeWidth=2;dashed=1;" vertex="1" parent="1">
+          <mxGeometry x="80" y="80" width="1440" height="200" as="geometry" />
+        </mxCell>
+        <mxCell id="layer1-label" value="&lt;b&gt;CAPA 1: INGESTA Y DETECCIÓN&lt;/b&gt;" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;fontSize=14;fontColor=#0066CC;" vertex="1" parent="1">
+          <mxGeometry x="80" y="85" width="280" height="30" as="geometry" />
+        </mxCell>
+
+        <!-- Layer 2: Inteligencia y Orquestación -->
+        <mxCell id="layer2-group" value="" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#FFF4E6;strokeColor=#FFB84B;strokeWidth=2;dashed=1;" vertex="1" parent="1">
+          <mxGeometry x="80" y="320" width="1440" height="200" as="geometry" />
+        </mxCell>
+        <mxCell id="layer2-label" value="&lt;b&gt;CAPA 2: INTELIGENCIA Y ORQUESTACIÓN&lt;/b&gt;" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;fontSize=14;fontColor=#FF8C00;" vertex="1" parent="1">
+          <mxGeometry x="80" y="325" width="340" height="30" as="geometry" />
+        </mxCell>
+
+        <!-- Layer 3: Ejecución y Remediación -->
+        <mxCell id="layer3-group" value="" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#E6FFE6;strokeColor=#4BFF4B;strokeWidth=2;dashed=1;" vertex="1" parent="1">
+          <mxGeometry x="80" y="560" width="1440" height="200" as="geometry" />
+        </mxCell>
+        <mxCell id="layer3-label" value="&lt;b&gt;CAPA 3: EJECUCIÓN Y REMEDIACIÓN&lt;/b&gt;" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;fontSize=14;fontColor=#008800;" vertex="1" parent="1">
+          <mxGeometry x="80" y="565" width="320" height="30" as="geometry" />
+        </mxCell>
+
+        <!-- Layer 4: Observabilidad y Aprendizaje -->
+        <mxCell id="layer4-group" value="" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#FFE6F0;strokeColor=#FF4B9B;strokeWidth=2;dashed=1;" vertex="1" parent="1">
+          <mxGeometry x="80" y="800" width="1440" height="200" as="geometry" />
+        </mxCell>
+        <mxCell id="layer4-label" value="&lt;b&gt;CAPA 4: OBSERVABILIDAD Y APRENDIZAJE&lt;/b&gt;" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;fontSize=14;fontColor=#CC0066;" vertex="1" parent="1">
+          <mxGeometry x="80" y="805" width="360" height="30" as="geometry" />
+        </mxCell>
+
+        <!-- Layer 1 Components -->
+        <!-- Metrics Collectors -->
+        <mxCell id="metrics-collectors" value="&lt;b&gt;Metrics Collectors&lt;/b&gt;&lt;br&gt;• SSMAS API&lt;br&gt;• GAM API&lt;br&gt;• Partner APIs&lt;br&gt;• CDN Logs" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#FFFFFF;strokeColor=#0066CC;strokeWidth=2;" vertex="1" parent="1">
+          <mxGeometry x="120" y="130" width="160" height="120" as="geometry" />
+        </mxCell>
+
+        <!-- Stream Processing -->
+        <mxCell id="stream-processing" value="&lt;b&gt;Stream Processing&lt;/b&gt;&lt;br&gt;• Real-time ETL&lt;br&gt;• Windowing&lt;br&gt;• Aggregation&lt;br&gt;• Normalization" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#FFFFFF;strokeColor=#0066CC;strokeWidth=2;" vertex="1" parent="1">
+          <mxGeometry x="320" y="130" width="160" height="120" as="geometry" />
+        </mxCell>
+
+        <!-- Anomaly Detection -->
+        <mxCell id="anomaly-detection" value="&lt;b&gt;Anomaly Detection&lt;/b&gt;&lt;br&gt;• Statistical Models&lt;br&gt;• ML Models&lt;br&gt;• Threshold Analysis&lt;br&gt;• Pattern Recognition" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#FFFFFF;strokeColor=#0066CC;strokeWidth=2;" vertex="1" parent="1">
+          <mxGeometry x="520" y="130" width="160" height="120" as="geometry" />
+        </mxCell>
+
+        <!-- Alert Correlation -->
+        <mxCell id="alert-correlation" value="&lt;b&gt;Alert Correlation&lt;/b&gt;&lt;br&gt;• Temporal Grouping&lt;br&gt;• Causal Analysis&lt;br&gt;• Deduplication&lt;br&gt;• Prioritization" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#FFFFFF;strokeColor=#0066CC;strokeWidth=2;" vertex="1" parent="1">
+          <mxGeometry x="720" y="130" width="160" height="120" as="geometry" />
+        </mxCell>
+
+        <!-- Event Bus -->
+        <mxCell id="event-bus" value="&lt;b&gt;Event Bus&lt;/b&gt;&lt;br&gt;Event Routing &amp; Distribution" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#FFE6CC;strokeColor=#FF8C00;strokeWidth=2;" vertex="1" parent="1">
+          <mxGeometry x="920" y="130" width="560" height="60" as="geometry" />
+        </mxCell>
+
+        <!-- Layer 2 Components -->
+        <!-- Bedrock Orchestrator -->
+        <mxCell id="bedrock-orchestrator" value="&lt;b&gt;Bedrock Agent&lt;/b&gt;&lt;br&gt;&lt;b&gt;Orchestrator&lt;/b&gt;&lt;br&gt;• Problem Classification&lt;br&gt;• Agent Selection&lt;br&gt;• Session Management&lt;br&gt;• Coordination" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#FFFFFF;strokeColor=#FF8C00;strokeWidth=2;" vertex="1" parent="1">
+          <mxGeometry x="120" y="370" width="180" height="120" as="geometry" />
+        </mxCell>
+
+        <!-- Specialized Agents -->
+        <mxCell id="perf-agent" value="&lt;b&gt;Performance&lt;/b&gt;&lt;br&gt;&lt;b&gt;Agent&lt;/b&gt;" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#FFFFCC;strokeColor=#FF8C00;strokeWidth=1;" vertex="1" parent="1">
+          <mxGeometry x="340" y="370" width="100" height="50" as="geometry" />
+        </mxCell>
+
+        <mxCell id="config-agent" value="&lt;b&gt;Configuration&lt;/b&gt;&lt;br&gt;&lt;b&gt;Agent&lt;/b&gt;" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#FFFFCC;strokeColor=#FF8C00;strokeWidth=1;" vertex="1" parent="1">
+          <mxGeometry x="460" y="370" width="100" height="50" as="geometry" />
+        </mxCell>
+
+        <mxCell id="demand-agent" value="&lt;b&gt;Demand&lt;/b&gt;&lt;br&gt;&lt;b&gt;Agent&lt;/b&gt;" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#FFFFCC;strokeColor=#FF8C00;strokeWidth=1;" vertex="1" parent="1">
+          <mxGeometry x="580" y="370" width="100" height="50" as="geometry" />
+        </mxCell>
+
+        <mxCell id="infra-agent" value="&lt;b&gt;Infrastructure&lt;/b&gt;&lt;br&gt;&lt;b&gt;Agent&lt;/b&gt;" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#FFFFCC;strokeColor=#FF8C00;strokeWidth=1;" vertex="1" parent="1">
+          <mxGeometry x="340" y="440" width="100" height="50" as="geometry" />
+        </mxCell>
+
+        <mxCell id="security-agent" value="&lt;b&gt;Security&lt;/b&gt;&lt;br&gt;&lt;b&gt;Agent&lt;/b&gt;" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#FFFFCC;strokeColor=#FF8C00;strokeWidth=1;" vertex="1" parent="1">
+          <mxGeometry x="460" y="440" width="100" height="50" as="geometry" />
+        </mxCell>
+
+        <!-- Knowledge Base -->
+        <mxCell id="knowledge-base" value="&lt;b&gt;Knowledge Base&lt;/b&gt;&lt;br&gt;• Runbooks&lt;br&gt;• Historical Cases&lt;br&gt;• Best Practices&lt;br&gt;• Configurations" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#FFFFFF;strokeColor=#FF8C00;strokeWidth=2;" vertex="1" parent="1">
+          <mxGeometry x="720" y="370" width="160" height="120" as="geometry" />
+        </mxCell>
+
+        <!-- Decision Engine -->
+        <mxCell id="decision-engine" value="&lt;b&gt;Decision Engine&lt;/b&gt;&lt;br&gt;• Risk Analysis&lt;br&gt;• Action Selection&lt;br&gt;• Confidence Scoring&lt;br&gt;• Constraint Validation" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#FFFFFF;strokeColor=#FF8C00;strokeWidth=2;" vertex="1" parent="1">
+          <mxGeometry x="920" y="370" width="160" height="120" as="geometry" />
+        </mxCell>
+
+        <!-- Context Manager -->
+        <mxCell id="context-manager" value="&lt;b&gt;Context Manager&lt;/b&gt;&lt;br&gt;• System State&lt;br&gt;• Event History&lt;br&gt;• Dependencies&lt;br&gt;• Business Context" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#FFFFFF;strokeColor=#FF8C00;strokeWidth=2;" vertex="1" parent="1">
+          <mxGeometry x="1120" y="370" width="160" height="120" as="geometry" />
+        </mxCell>
+
+        <!-- Session Store -->
+        <mxCell id="session-store" value="&lt;b&gt;Session Store&lt;/b&gt;&lt;br&gt;In-Memory + DynamoDB" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#FFE6CC;strokeColor=#FF8C00;strokeWidth=2;" vertex="1" parent="1">
+          <mxGeometry x="1320" y="400" width="160" height="60" as="geometry" />
+        </mxCell>
+
+        <!-- Layer 3 Components -->
+        <!-- Action Library -->
+        <mxCell id="action-library" value="&lt;b&gt;Action Library&lt;/b&gt;" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#FFFFFF;strokeColor=#008800;strokeWidth=2;" vertex="1" parent="1">
+          <mxGeometry x="120" y="590" width="140" height="40" as="geometry" />
+        </mxCell>
+
+        <!-- Diagnostic Actions -->
+        <mxCell id="diagnostic-actions" value="&lt;b&gt;Diagnostic&lt;/b&gt;&lt;br&gt;• Log Analysis&lt;br&gt;• Config Check&lt;br&gt;• Health Check" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#CCFFCC;strokeColor=#008800;strokeWidth=1;" vertex="1" parent="1">
+          <mxGeometry x="120" y="640" width="120" height="80" as="geometry" />
+        </mxCell>
+
+        <!-- Remediation Actions -->
+        <mxCell id="remediation-actions" value="&lt;b&gt;Remediation&lt;/b&gt;&lt;br&gt;• Config Update&lt;br&gt;• Traffic Control&lt;br&gt;• Service Restart" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#CCFFCC;strokeColor=#008800;strokeWidth=1;" vertex="1" parent="1">
+          <mxGeometry x="260" y="640" width="120" height="80" as="geometry" />
+        </mxCell>
+
+        <!-- Notification Actions -->
+        <mxCell id="notification-actions" value="&lt;b&gt;Notification&lt;/b&gt;&lt;br&gt;• Email/SMS&lt;br&gt;• Slack/Teams&lt;br&gt;• Escalation" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#CCFFCC;strokeColor=#008800;strokeWidth=1;" vertex="1" parent="1">
+          <mxGeometry x="400" y="640" width="120" height="80" as="geometry" />
+        </mxCell>
+
+        <!-- Execution Controller -->
+        <mxCell id="execution-controller" value="&lt;b&gt;Execution Controller&lt;/b&gt;&lt;br&gt;• Permission Check&lt;br&gt;• Action Ordering&lt;br&gt;• Rollback Logic&lt;br&gt;• Safety Controls" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#FFFFFF;strokeColor=#008800;strokeWidth=2;" vertex="1" parent="1">
+          <mxGeometry x="560" y="610" width="160" height="120" as="geometry" />
+        </mxCell>
+
+        <!-- Integration Adapters -->
+        <mxCell id="integration-adapters" value="&lt;b&gt;Integration Adapters&lt;/b&gt;&lt;br&gt;• SSMAS API&lt;br&gt;• GAM API&lt;br&gt;• AWS APIs&lt;br&gt;• Partner APIs" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#FFFFFF;strokeColor=#008800;strokeWidth=2;" vertex="1" parent="1">
+          <mxGeometry x="760" y="610" width="160" height="120" as="geometry" />
+        </mxCell>
+
+        <!-- Validation Service -->
+        <mxCell id="validation-service" value="&lt;b&gt;Validation Service&lt;/b&gt;&lt;br&gt;• Metric Validation&lt;br&gt;• Side Effect Check&lt;br&gt;• Rollback Decision&lt;br&gt;• Success Criteria" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#FFFFFF;strokeColor=#008800;strokeWidth=2;" vertex="1" parent="1">
+          <mxGeometry x="960" y="610" width="160" height="120" as="geometry" />
+        </mxCell>
+
+        <!-- External Systems -->
+        <mxCell id="external-systems" value="&lt;b&gt;External Systems&lt;/b&gt;&lt;br&gt;SSMAS | GAM | Partners | AWS" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#E6FFE6;strokeColor=#008800;strokeWidth=2;dashed=1;" vertex="1" parent="1">
+          <mxGeometry x="1160" y="610" width="320" height="120" as="geometry" />
+        </mxCell>
+
+        <!-- Layer 4 Components -->
+        <!-- Metrics Aggregator -->
+        <mxCell id="metrics-aggregator" value="&lt;b&gt;Metrics Aggregator&lt;/b&gt;&lt;br&gt;• MTTR Calculation&lt;br&gt;• Success Rates&lt;br&gt;• Impact Analysis&lt;br&gt;• Cost Tracking" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#FFFFFF;strokeColor=#CC0066;strokeWidth=2;" vertex="1" parent="1">
+          <mxGeometry x="120" y="850" width="160" height="120" as="geometry" />
+        </mxCell>
+
+        <!-- Audit Logger -->
+        <mxCell id="audit-logger" value="&lt;b&gt;Audit Logger&lt;/b&gt;&lt;br&gt;• Decision Logging&lt;br&gt;• Action Tracking&lt;br&gt;• Compliance Records&lt;br&gt;• Immutable Store" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#FFFFFF;strokeColor=#CC0066;strokeWidth=2;" vertex="1" parent="1">
+          <mxGeometry x="320" y="850" width="160" height="120" as="geometry" />
+        </mxCell>
+
+        <!-- Learning Pipeline -->
+        <mxCell id="learning-pipeline" value="&lt;b&gt;Learning Pipeline&lt;/b&gt;&lt;br&gt;• Pattern Analysis&lt;br&gt;• Model Training&lt;br&gt;• Strategy Optimization&lt;br&gt;• Threshold Tuning" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#FFFFFF;strokeColor=#CC0066;strokeWidth=2;" vertex="1" parent="1">
+          <mxGeometry x="520" y="850" width="160" height="120" as="geometry" />
+        </mxCell>
+
+        <!-- Feedback Processor -->
+        <mxCell id="feedback-processor" value="&lt;b&gt;Feedback Processor&lt;/b&gt;&lt;br&gt;• Human Validation&lt;br&gt;• Correction Import&lt;br&gt;• Knowledge Update&lt;br&gt;• Model Retraining" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#FFFFFF;strokeColor=#CC0066;strokeWidth=2;" vertex="1" parent="1">
+          <mxGeometry x="720" y="850" width="160" height="120" as="geometry" />
+        </mxCell>
+
+        <!-- Analytics Dashboard -->
+        <mxCell id="analytics-dashboard" value="&lt;b&gt;Analytics Dashboard&lt;/b&gt;&lt;br&gt;Real-time Visualization &amp; Reporting" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#FFE6F0;strokeColor=#CC0066;strokeWidth=2;" vertex="1" parent="1">
+          <mxGeometry x="920" y="850" width="240" height="60" as="geometry" />
+        </mxCell>
+
+        <!-- Data Lake -->
+        <mxCell id="data-lake" value="&lt;b&gt;Data Lake&lt;/b&gt;&lt;br&gt;Historical Data &amp; ML Training Sets" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#FFE6F0;strokeColor=#CC0066;strokeWidth=2;" vertex="1" parent="1">
+          <mxGeometry x="1200" y="850" width="280" height="60" as="geometry" />
+        </mxCell>
+
+        <!-- ML Models -->
+        <mxCell id="ml-models" value="&lt;b&gt;ML Models&lt;/b&gt;&lt;br&gt;Continuous Improvement" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#FFE6F0;strokeColor=#CC0066;strokeWidth=2;" vertex="1" parent="1">
+          <mxGeometry x="1200" y="920" width="280" height="50" as="geometry" />
+        </mxCell>
+
+        <!-- Connections -->
+        <!-- Layer 1 to Layer 2 -->
+        <mxCell id="edge1" style="edgeStyle=orthogonalEdgeStyle;rounded=1;orthogonalLoop=1;jettySize=auto;html=1;strokeColor=#0066CC;strokeWidth=2;startArrow=none;endArrow=classic;" edge="1" parent="1" source="alert-correlation" target="bedrock-orchestrator">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+
+        <mxCell id="edge2" style="edgeStyle=orthogonalEdgeStyle;rounded=1;orthogonalLoop=1;jettySize=auto;html=1;strokeColor=#0066CC;strokeWidth=2;startArrow=none;endArrow=classic;" edge="1" parent="1" source="event-bus" target="bedrock-orchestrator">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+
+        <!-- Layer 2 to Layer 3 -->
+        <mxCell id="edge3" style="edgeStyle=orthogonalEdgeStyle;rounded=1;orthogonalLoop=1;jettySize=auto;html=1;strokeColor=#FF8C00;strokeWidth=2;startArrow=none;endArrow=classic;" edge="1" parent="1" source="decision-engine" target="execution-controller">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+
+        <!-- Layer 3 to Layer 4 -->
+        <mxCell id="edge4" style="edgeStyle=orthogonalEdgeStyle;rounded=1;orthogonalLoop=1;jettySize=auto;html=1;strokeColor=#008800;strokeWidth=2;startArrow=none;endArrow=classic;" edge="1" parent="1" source="validation-service" target="metrics-aggregator">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+
+        <!-- Feedback Loop -->
+        <mxCell id="feedback-loop" style="edgeStyle=orthogonalEdgeStyle;rounded=1;orthogonalLoop=1;jettySize=auto;html=1;strokeColor=#CC0066;strokeWidth=2;startArrow=none;endArrow=classic;dashed=1;" edge="1" parent="1" source="learning-pipeline" target="knowledge-base">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="600" y="1040" />
+              <mxPoint x="1560" y="1040" />
+              <mxPoint x="1560" y="430" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+
+        <!-- Internal Layer Connections -->
+        <mxCell id="internal1" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;strokeColor=#666666;strokeWidth=1;startArrow=none;endArrow=classic;" edge="1" parent="1" source="metrics-collectors" target="stream-processing">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+
+        <mxCell id="internal2" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;strokeColor=#666666;strokeWidth=1;startArrow=none;endArrow=classic;" edge="1" parent="1" source="stream-processing" target="anomaly-detection">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+
+        <mxCell id="internal3" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;strokeColor=#666666;strokeWidth=1;startArrow=none;endArrow=classic;" edge="1" parent="1" source="anomaly-detection" target="alert-correlation">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+
+        <!-- Legend -->
+        <mxCell id="legend-title" value="&lt;b&gt;LEYENDA&lt;/b&gt;" style="text;html=1;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;whiteSpace=wrap;rounded=0;fontSize=12;" vertex="1" parent="1">
+          <mxGeometry x="80" y="1060" width="100" height="30" as="geometry" />
+        </mxCell>
+
+        <mxCell id="legend-flow" value="Flujo de Datos" style="text;html=1;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;whiteSpace=wrap;rounded=0;fontSize=11;" vertex="1" parent="1">
+          <mxGeometry x="120" y="1090" width="100" height="20" as="geometry" />
+        </mxCell>
+        <mxCell id="legend-flow-line" value="" style="endArrow=classic;html=1;strokeColor=#666666;strokeWidth=1;" edge="1" parent="1">
+          <mxGeometry width="50" height="50" relative="1" as="geometry">
+            <mxPoint x="80" y="1100" as="sourcePoint" />
+            <mxPoint x="110" y="1100" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+
+        <mxCell id="legend-feedback" value="Feedback Loop" style="text;html=1;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;whiteSpace=wrap;rounded=0;fontSize=11;" vertex="1" parent="1">
+          <mxGeometry x="120" y="1110" width="100" height="20" as="geometry" />
+        </mxCell>
+        <mxCell id="legend-feedback-line" value="" style="endArrow=classic;html=1;strokeColor=#CC0066;strokeWidth=2;dashed=1;" edge="1" parent="1">
+          <mxGeometry width="50" height="50" relative="1" as="geometry">
+            <mxPoint x="80" y="1120" as="sourcePoint" />
+            <mxPoint x="110" y="1120" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+
+      </root>
+    </mxGraphModel>
+  </diagram>
+</mxfile>

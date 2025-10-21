@@ -1,0 +1,28 @@
+{
+  "mcpServers": {
+    "aws-core": {
+      "type": "stdio",
+      "command": "uvx",
+      "args": [
+        "awslabs.core-mcp-server@latest"
+      ],
+      "env": {}
+    },
+    "aws-docs": {
+      "type": "stdio",
+      "command": "uvx",
+      "args": [
+        "awslabs.aws-documentation-mcp-server@latest"
+      ],
+      "env": {}
+    },
+    "aws-knowledge": {
+      "type": "stdio",
+      "command": "uvx",
+      "args": [
+        "awslabs.aws-knowledge-mcp-server@latest"
+      ],
+      "env": {}
+    }
+  }
+}

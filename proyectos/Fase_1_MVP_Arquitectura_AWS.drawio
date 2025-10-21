@@ -1,0 +1,294 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<mxfile host="app.diagrams.net" agent="draw.io" version="24.7.16">
+  <diagram name="Phase 1 - MVP Architecture" id="phase-1-mvp">
+    <mxGraphModel dx="1800" dy="1000" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="1400" pageHeight="1000" background="#FFFFFF" math="0" shadow="0">
+      <root>
+        <mxCell id="0" />
+        <mxCell id="1" parent="0" />
+
+        <!-- AWS Cloud Background -->
+        <mxCell id="aws-cloud" value="" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#F2F2F2;strokeColor=#666666;strokeWidth=2;dashed=1;" vertex="1" parent="1">
+          <mxGeometry x="60" y="60" width="1280" height="880" as="geometry" />
+        </mxCell>
+        <mxCell id="aws-cloud-label" value="&lt;b&gt;AWS Cloud - US-East-1 (MVP Environment)&lt;/b&gt;" style="text;html=1;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;whiteSpace=wrap;rounded=0;fontSize=14;fontColor=#232F3E;" vertex="1" parent="1">
+          <mxGeometry x="70" y="70" width="350" height="30" as="geometry" />
+        </mxCell>
+
+        <!-- MVP Badge -->
+        <mxCell id="mvp-badge" value="&lt;b&gt;MVP&lt;/b&gt;&lt;br&gt;Phase 1" style="ellipse;whiteSpace=wrap;html=1;fillColor=#FF9933;strokeColor=#FF6600;fontColor=#FFFFFF;fontSize=12;" vertex="1" parent="1">
+          <mxGeometry x="1250" y="80" width="70" height="70" as="geometry" />
+        </mxCell>
+
+        <!-- Single VPC for MVP -->
+        <mxCell id="vpc" value="" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#7AA116;fillOpacity=10;strokeColor=#7AA116;strokeWidth=2;dashed=1;" vertex="1" parent="1">
+          <mxGeometry x="100" y="120" width="1200" height="780" as="geometry" />
+        </mxCell>
+        <mxCell id="vpc-label" value="&lt;b&gt;MVP VPC (10.0.0.0/24)&lt;/b&gt;" style="text;html=1;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;whiteSpace=wrap;rounded=0;fontSize=12;fontColor=#7AA116;" vertex="1" parent="1">
+          <mxGeometry x="110" y="130" width="180" height="25" as="geometry" />
+        </mxCell>
+
+        <!-- Single AZ for MVP -->
+        <mxCell id="az" value="" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#FFEBCD;fillOpacity=10;strokeColor=#ED7100;strokeWidth=1;dashed=1;" vertex="1" parent="1">
+          <mxGeometry x="140" y="180" width="1120" height="680" as="geometry" />
+        </mxCell>
+        <mxCell id="az-label" value="&lt;b&gt;Availability Zone us-east-1a&lt;/b&gt;" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;fontSize=11;fontColor=#ED7100;" vertex="1" parent="1">
+          <mxGeometry x="140" y="185" width="180" height="20" as="geometry" />
+        </mxCell>
+
+        <!-- Private Subnet -->
+        <mxCell id="private-subnet" value="Private Subnet (10.0.0.0/26)" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#E6F2FF;strokeColor=#147EBA;strokeWidth=1;" vertex="1" parent="1">
+          <mxGeometry x="160" y="220" width="1080" height="40" as="geometry" />
+        </mxCell>
+
+        <!-- Input Layer -->
+        <mxCell id="input-layer" value="" style="rounded=1;whiteSpace=wrap;html=1;fillColor=none;strokeColor=#FF9933;strokeWidth=2;dashed=1;" vertex="1" parent="1">
+          <mxGeometry x="180" y="280" width="1040" height="120" as="geometry" />
+        </mxCell>
+        <mxCell id="input-label" value="&lt;b&gt;Detection Layer (Simple Monitoring)&lt;/b&gt;" style="text;html=1;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;whiteSpace=wrap;rounded=0;fontSize=12;fontColor=#FF9933;" vertex="1" parent="1">
+          <mxGeometry x="190" y="285" width="250" height="25" as="geometry" />
+        </mxCell>
+
+        <!-- CloudWatch Metric -->
+        <mxCell id="cloudwatch-metric" value="" style="sketch=0;points=[[0,0,0],[0.25,0,0],[0.5,0,0],[0.75,0,0],[1,0,0],[0,1,0],[0.25,1,0],[0.5,1,0],[0.75,1,0],[1,1,0],[0,0.25,0],[0,0.5,0],[0,0.75,0],[1,0.25,0],[1,0.5,0],[1,0.75,0]];outlineConnect=0;fontColor=#232F3E;gradientColor=#F34482;gradientDirection=north;fillColor=#BC1356;strokeColor=#ffffff;dashed=0;verticalLabelPosition=bottom;verticalAlign=top;align=center;html=1;fontSize=11;fontStyle=0;aspect=fixed;shape=mxgraph.aws4.resourceIcon;resIcon=mxgraph.aws4.cloudwatch;" vertex="1" parent="1">
+          <mxGeometry x="200" y="320" width="60" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="cloudwatch-metric-label" value="CloudWatch&lt;br&gt;RPM Metric" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=top;whiteSpace=wrap;rounded=0;fontSize=10;" vertex="1" parent="1">
+          <mxGeometry x="190" y="375" width="80" height="25" as="geometry" />
+        </mxCell>
+
+        <!-- CloudWatch Alarm -->
+        <mxCell id="alarm-box" value="&lt;b&gt;RPM Drop Alarm&lt;/b&gt;&lt;br&gt;Threshold: &lt; $50&lt;br&gt;Period: 5 min&lt;br&gt;Datapoints: 2" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#FFE6CC;strokeColor=#FF9933;fontSize=10;align=left;" vertex="1" parent="1">
+          <mxGeometry x="300" y="325" width="120" height="50" as="geometry" />
+        </mxCell>
+
+        <!-- Lambda Trigger -->
+        <mxCell id="lambda-trigger" value="" style="sketch=0;points=[[0,0,0],[0.25,0,0],[0.5,0,0],[0.75,0,0],[1,0,0],[0,1,0],[0.25,1,0],[0.5,1,0],[0.75,1,0],[1,1,0],[0,0.25,0],[0,0.5,0],[0,0.75,0],[1,0.25,0],[1,0.5,0],[1,0.75,0]];outlineConnect=0;fontColor=#232F3E;gradientColor=#F78E04;gradientDirection=north;fillColor=#D05C17;strokeColor=#ffffff;dashed=0;verticalLabelPosition=bottom;verticalAlign=top;align=center;html=1;fontSize=11;fontStyle=0;aspect=fixed;shape=mxgraph.aws4.resourceIcon;resIcon=mxgraph.aws4.lambda;" vertex="1" parent="1">
+          <mxGeometry x="460" y="320" width="60" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="lambda-trigger-label" value="Lambda&lt;br&gt;Trigger" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=top;whiteSpace=wrap;rounded=0;fontSize=10;" vertex="1" parent="1">
+          <mxGeometry x="450" y="375" width="80" height="25" as="geometry" />
+        </mxCell>
+
+        <!-- Intelligence Layer -->
+        <mxCell id="intelligence-layer" value="" style="rounded=1;whiteSpace=wrap;html=1;fillColor=none;strokeColor=#C925D1;strokeWidth=2;dashed=1;" vertex="1" parent="1">
+          <mxGeometry x="180" y="420" width="1040" height="180" as="geometry" />
+        </mxCell>
+        <mxCell id="intelligence-label" value="&lt;b&gt;Intelligence Layer (Single Agent)&lt;/b&gt;" style="text;html=1;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;whiteSpace=wrap;rounded=0;fontSize=12;fontColor=#C925D1;" vertex="1" parent="1">
+          <mxGeometry x="190" y="425" width="250" height="25" as="geometry" />
+        </mxCell>
+
+        <!-- Bedrock Agent MVP -->
+        <mxCell id="bedrock-agent" value="" style="sketch=0;outlineConnect=0;fontColor=#232F3E;gradientColor=none;fillColor=#C925D1;strokeColor=none;dashed=0;verticalLabelPosition=bottom;verticalAlign=top;align=center;html=1;fontSize=11;fontStyle=0;aspect=fixed;pointerEvents=1;shape=mxgraph.aws4.bedrock;" vertex="1" parent="1">
+          <mxGeometry x="200" y="470" width="78" height="78" as="geometry" />
+        </mxCell>
+        <mxCell id="bedrock-agent-label" value="Bedrock Agent&lt;br&gt;Claude 3 Haiku&lt;br&gt;(MVP Agent)" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=top;whiteSpace=wrap;rounded=0;fontSize=10;" vertex="1" parent="1">
+          <mxGeometry x="189" y="553" width="100" height="40" as="geometry" />
+        </mxCell>
+
+        <!-- Agent Instructions Box -->
+        <mxCell id="agent-instructions" value="&lt;b&gt;Agent Scope:&lt;/b&gt;&lt;br&gt;• Single Editor (Pilot)&lt;br&gt;• RPM Drop Detection&lt;br&gt;• Partner Health Check&lt;br&gt;• Simple Remediation" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#F5F5F5;strokeColor=#666666;fontSize=10;align=left;" vertex="1" parent="1">
+          <mxGeometry x="320" y="478" width="140" height="70" as="geometry" />
+        </mxCell>
+
+        <!-- Lambda Tools -->
+        <mxCell id="lambda-tools" value="" style="sketch=0;points=[[0,0,0],[0.25,0,0],[0.5,0,0],[0.75,0,0],[1,0,0],[0,1,0],[0.25,1,0],[0.5,1,0],[0.75,1,0],[1,1,0],[0,0.25,0],[0,0.5,0],[0,0.75,0],[1,0.25,0],[1,0.5,0],[1,0.75,0]];outlineConnect=0;fontColor=#232F3E;gradientColor=#F78E04;gradientDirection=north;fillColor=#D05C17;strokeColor=#ffffff;dashed=0;verticalLabelPosition=bottom;verticalAlign=top;align=center;html=1;fontSize=11;fontStyle=0;aspect=fixed;shape=mxgraph.aws4.resourceIcon;resIcon=mxgraph.aws4.lambda;" vertex="1" parent="1">
+          <mxGeometry x="500" y="479" width="60" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="lambda-tools-label" value="Lambda&lt;br&gt;MVP Tools" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=top;whiteSpace=wrap;rounded=0;fontSize=10;" vertex="1" parent="1">
+          <mxGeometry x="490" y="544" width="80" height="25" as="geometry" />
+        </mxCell>
+
+        <!-- Tools List -->
+        <mxCell id="tools-list" value="&lt;b&gt;5 Simple Tools:&lt;/b&gt;&lt;br&gt;• check_rpm_trend&lt;br&gt;• get_partner_status&lt;br&gt;• disable_partner&lt;br&gt;• clear_cache&lt;br&gt;• send_notification" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#FFE6F0;strokeColor=#C925D1;fontSize=9;align=left;" vertex="1" parent="1">
+          <mxGeometry x="600" y="474" width="130" height="70" as="geometry" />
+        </mxCell>
+
+        <!-- DynamoDB Session Store -->
+        <mxCell id="dynamodb" value="" style="sketch=0;points=[[0,0,0],[0.25,0,0],[0.5,0,0],[0.75,0,0],[1,0,0],[0,1,0],[0.25,1,0],[0.5,1,0],[0.75,1,0],[1,1,0],[0,0.25,0],[0,0.5,0],[0,0.75,0],[1,0.25,0],[1,0.5,0],[1,0.75,0]];outlineConnect=0;fontColor=#232F3E;gradientColor=#4D72F3;gradientDirection=north;fillColor=#3334B9;strokeColor=#ffffff;dashed=0;verticalLabelPosition=bottom;verticalAlign=top;align=center;html=1;fontSize=11;fontStyle=0;aspect=fixed;shape=mxgraph.aws4.resourceIcon;resIcon=mxgraph.aws4.dynamodb;" vertex="1" parent="1">
+          <mxGeometry x="770" y="479" width="60" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="dynamodb-label" value="DynamoDB&lt;br&gt;Session Store&lt;br&gt;(On-Demand)" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=top;whiteSpace=wrap;rounded=0;fontSize=10;" vertex="1" parent="1">
+          <mxGeometry x="760" y="544" width="80" height="35" as="geometry" />
+        </mxCell>
+
+        <!-- Execution Layer -->
+        <mxCell id="execution-layer" value="" style="rounded=1;whiteSpace=wrap;html=1;fillColor=none;strokeColor=#069C3F;strokeWidth=2;dashed=1;" vertex="1" parent="1">
+          <mxGeometry x="180" y="620" width="1040" height="120" as="geometry" />
+        </mxCell>
+        <mxCell id="execution-label" value="&lt;b&gt;Execution Layer (Limited Actions)&lt;/b&gt;" style="text;html=1;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;whiteSpace=wrap;rounded=0;fontSize=12;fontColor=#069C3F;" vertex="1" parent="1">
+          <mxGeometry x="190" y="625" width="250" height="25" as="geometry" />
+        </mxCell>
+
+        <!-- Partner API Mock -->
+        <mxCell id="partner-api" value="Partner API&lt;br&gt;(Mock)" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#E6FFE6;strokeColor=#069C3F;fontSize=10;" vertex="1" parent="1">
+          <mxGeometry x="200" y="660" width="100" height="50" as="geometry" />
+        </mxCell>
+
+        <!-- Config Update -->
+        <mxCell id="config-update" value="Config Update&lt;br&gt;(DynamoDB)" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#E6FFE6;strokeColor=#069C3F;fontSize=10;" vertex="1" parent="1">
+          <mxGeometry x="330" y="660" width="100" height="50" as="geometry" />
+        </mxCell>
+
+        <!-- Cache Clear -->
+        <mxCell id="cache-clear" value="Cache Clear&lt;br&gt;(Simple API)" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#E6FFE6;strokeColor=#069C3F;fontSize=10;" vertex="1" parent="1">
+          <mxGeometry x="460" y="660" width="100" height="50" as="geometry" />
+        </mxCell>
+
+        <!-- SNS Notification -->
+        <mxCell id="sns" value="" style="sketch=0;points=[[0,0,0],[0.25,0,0],[0.5,0,0],[0.75,0,0],[1,0,0],[0,1,0],[0.25,1,0],[0.5,1,0],[0.75,1,0],[1,1,0],[0,0.25,0],[0,0.5,0],[0,0.75,0],[1,0.25,0],[1,0.5,0],[1,0.75,0]];outlineConnect=0;fontColor=#232F3E;gradientColor=#FF4F8B;gradientDirection=north;fillColor=#BC1356;strokeColor=#ffffff;dashed=0;verticalLabelPosition=bottom;verticalAlign=top;align=center;html=1;fontSize=11;fontStyle=0;aspect=fixed;shape=mxgraph.aws4.resourceIcon;resIcon=mxgraph.aws4.sns;" vertex="1" parent="1">
+          <mxGeometry x="600" y="660" width="50" height="50" as="geometry" />
+        </mxCell>
+        <mxCell id="sns-label" value="SNS&lt;br&gt;Notifications" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=top;whiteSpace=wrap;rounded=0;fontSize=10;" vertex="1" parent="1">
+          <mxGeometry x="590" y="710" width="70" height="25" as="geometry" />
+        </mxCell>
+
+        <!-- Observability Layer -->
+        <mxCell id="observability-layer" value="" style="rounded=1;whiteSpace=wrap;html=1;fillColor=none;strokeColor=#3334B9;strokeWidth=2;dashed=1;" vertex="1" parent="1">
+          <mxGeometry x="180" y="760" width="1040" height="80" as="geometry" />
+        </mxCell>
+        <mxCell id="observability-label" value="&lt;b&gt;Observability (Basic Monitoring)&lt;/b&gt;" style="text;html=1;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;whiteSpace=wrap;rounded=0;fontSize=12;fontColor=#3334B9;" vertex="1" parent="1">
+          <mxGeometry x="190" y="765" width="250" height="25" as="geometry" />
+        </mxCell>
+
+        <!-- CloudWatch Logs -->
+        <mxCell id="cloudwatch-logs" value="" style="sketch=0;points=[[0,0,0],[0.25,0,0],[0.5,0,0],[0.75,0,0],[1,0,0],[0,1,0],[0.25,1,0],[0.5,1,0],[0.75,1,0],[1,1,0],[0,0.25,0],[0,0.5,0],[0,0.75,0],[1,0.25,0],[1,0.5,0],[1,0.75,0]];outlineConnect=0;fontColor=#232F3E;gradientColor=#F34482;gradientDirection=north;fillColor=#BC1356;strokeColor=#ffffff;dashed=0;verticalLabelPosition=bottom;verticalAlign=top;align=center;html=1;fontSize=11;fontStyle=0;aspect=fixed;shape=mxgraph.aws4.resourceIcon;resIcon=mxgraph.aws4.cloudwatch;" vertex="1" parent="1">
+          <mxGeometry x="200" y="785" width="40" height="40" as="geometry" />
+        </mxCell>
+        <mxCell id="cloudwatch-logs-label" value="CloudWatch&lt;br&gt;Logs" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=top;whiteSpace=wrap;rounded=0;fontSize=9;" vertex="1" parent="1">
+          <mxGeometry x="190" y="820" width="60" height="20" as="geometry" />
+        </mxCell>
+
+        <!-- Dashboard Widget -->
+        <mxCell id="dashboard" value="&lt;b&gt;MVP Dashboard&lt;/b&gt;&lt;br&gt;• RPM Trend&lt;br&gt;• Agent Activations&lt;br&gt;• Resolution Rate&lt;br&gt;• MTTR Comparison" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#E6F2FF;strokeColor=#3334B9;fontSize=9;align=left;" vertex="1" parent="1">
+          <mxGeometry x="270" y="780" width="120" height="50" as="geometry" />
+        </mxCell>
+
+        <!-- Success Metrics Box -->
+        <mxCell id="metrics-box" value="&lt;b&gt;MVP Success Metrics&lt;/b&gt;&lt;br&gt;MTTR: 45min → 5min&lt;br&gt;Auto Resolution: 70%&lt;br&gt;Cost/Incident: $50 → $5&lt;br&gt;ROI: 10x" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#D4EDDA;strokeColor=#28A745;fontSize=10;align=left;fontStyle=0;" vertex="1" parent="1">
+          <mxGeometry x="870" y="475" width="140" height="70" as="geometry" />
+        </mxCell>
+
+        <!-- External Editor -->
+        <mxCell id="external-editor" value="" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#FFE6E6;strokeColor=#DD3522;strokeWidth=1;dashed=1;" vertex="1" parent="1">
+          <mxGeometry x="880" y="620" width="320" height="120" as="geometry" />
+        </mxCell>
+        <mxCell id="external-label" value="&lt;b&gt;Editor X (Pilot)&lt;/b&gt;" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;fontSize=11;fontColor=#DD3522;" vertex="1" parent="1">
+          <mxGeometry x="880" y="625" width="120" height="20" as="geometry" />
+        </mxCell>
+
+        <mxCell id="editor-components" value="&lt;b&gt;SSMAS Ad Server&lt;/b&gt;&lt;br&gt;• Single Editor&lt;br&gt;• RPM Monitoring&lt;br&gt;• 3 Demand Partners&lt;br&gt;• Simple Config" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#FFFFFF;strokeColor=#666666;fontSize=10;align=left;" vertex="1" parent="1">
+          <mxGeometry x="900" y="655" width="130" height="70" as="geometry" />
+        </mxCell>
+
+        <mxCell id="team-notification" value="&lt;b&gt;AdOps Team&lt;/b&gt;&lt;br&gt;Email/SMS Alerts" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#FFFFFF;strokeColor=#666666;fontSize=10;" vertex="1" parent="1">
+          <mxGeometry x="1050" y="675" width="120" height="40" as="geometry" />
+        </mxCell>
+
+        <!-- Data Flow Arrows -->
+        <!-- Metric to Alarm -->
+        <mxCell id="flow-1" style="edgeStyle=orthogonalEdgeStyle;rounded=1;orthogonalLoop=1;jettySize=auto;html=1;strokeColor=#FF9933;strokeWidth=2;startArrow=none;endArrow=classic;" edge="1" parent="1" source="cloudwatch-metric" target="alarm-box">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+
+        <!-- Alarm to Lambda -->
+        <mxCell id="flow-2" style="edgeStyle=orthogonalEdgeStyle;rounded=1;orthogonalLoop=1;jettySize=auto;html=1;strokeColor=#FF9933;strokeWidth=2;startArrow=none;endArrow=classic;" edge="1" parent="1" source="alarm-box" target="lambda-trigger">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+
+        <!-- Lambda to Bedrock -->
+        <mxCell id="flow-3" style="edgeStyle=orthogonalEdgeStyle;rounded=1;orthogonalLoop=1;jettySize=auto;html=1;strokeColor=#C925D1;strokeWidth=2;startArrow=none;endArrow=classic;" edge="1" parent="1" source="lambda-trigger" target="bedrock-agent">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="490" y="450" />
+              <mxPoint x="240" y="450" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+
+        <!-- Bedrock to Tools -->
+        <mxCell id="flow-4" style="edgeStyle=orthogonalEdgeStyle;rounded=1;orthogonalLoop=1;jettySize=auto;html=1;strokeColor=#C925D1;strokeWidth=2;startArrow=none;endArrow=classic;endFill=1;" edge="1" parent="1" source="bedrock-agent" target="lambda-tools">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+
+        <!-- Tools to DynamoDB -->
+        <mxCell id="flow-5" style="edgeStyle=orthogonalEdgeStyle;rounded=1;orthogonalLoop=1;jettySize=auto;html=1;strokeColor=#3334B9;strokeWidth=1;startArrow=none;endArrow=classic;" edge="1" parent="1" source="lambda-tools" target="dynamodb">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+
+        <!-- Tools to Actions -->
+        <mxCell id="flow-6" style="edgeStyle=orthogonalEdgeStyle;rounded=1;orthogonalLoop=1;jettySize=auto;html=1;strokeColor=#069C3F;strokeWidth=2;startArrow=none;endArrow=classic;" edge="1" parent="1" source="lambda-tools" target="config-update">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="530" y="640" />
+              <mxPoint x="380" y="640" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+
+        <!-- Tools to SNS -->
+        <mxCell id="flow-7" style="edgeStyle=orthogonalEdgeStyle;rounded=1;orthogonalLoop=1;jettySize=auto;html=1;strokeColor=#BC1356;strokeWidth=2;startArrow=none;endArrow=classic;" edge="1" parent="1" source="lambda-tools" target="sns">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="530" y="630" />
+              <mxPoint x="625" y="630" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+
+        <!-- SNS to Team -->
+        <mxCell id="flow-8" style="edgeStyle=orthogonalEdgeStyle;rounded=1;orthogonalLoop=1;jettySize=auto;html=1;strokeColor=#DD3522;strokeWidth=2;startArrow=none;endArrow=classic;dashed=1;" edge="1" parent="1" source="sns" target="team-notification">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+
+        <!-- External Data Flow -->
+        <mxCell id="external-flow" style="edgeStyle=orthogonalEdgeStyle;rounded=1;orthogonalLoop=1;jettySize=auto;html=1;strokeColor=#666666;strokeWidth=2;startArrow=classic;endArrow=classic;dashed=1;" edge="1" parent="1" source="editor-components" target="cloudwatch-metric">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="965" y="600" />
+              <mxPoint x="160" y="600" />
+              <mxPoint x="160" y="350" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="external-flow-label" value="Metrics Push" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;fontSize=9;fontColor=#666666;" vertex="1" parent="1">
+          <mxGeometry x="550" y="580" width="80" height="20" as="geometry" />
+        </mxCell>
+
+        <!-- To Observability -->
+        <mxCell id="to-observability" style="edgeStyle=orthogonalEdgeStyle;rounded=1;orthogonalLoop=1;jettySize=auto;html=1;strokeColor=#3334B9;strokeWidth=1;startArrow=none;endArrow=classic;dashed=1;" edge="1" parent="1">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="530" y="550" as="sourcePoint" />
+            <mxPoint x="220" y="785" as="targetPoint" />
+            <Array as="points">
+              <mxPoint x="530" y="750" />
+              <mxPoint x="220" y="750" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+
+        <!-- MVP Timeline -->
+        <mxCell id="timeline-box" value="&lt;b&gt;MVP Timeline (6 Weeks)&lt;/b&gt;&lt;br&gt;Week 1-2: Setup &amp; Config&lt;br&gt;Week 3-4: Development&lt;br&gt;Week 5: Testing&lt;br&gt;Week 6: Shadow Mode" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#FFF3CD;strokeColor=#FFC107;fontSize=10;align=left;" vertex="1" parent="1">
+          <mxGeometry x="1050" y="780" width="150" height="60" as="geometry" />
+        </mxCell>
+
+        <!-- Cost Box -->
+        <mxCell id="cost-box" value="&lt;b&gt;Monthly Cost: ~$35&lt;/b&gt;&lt;br&gt;Bedrock: $25&lt;br&gt;Lambda: $2&lt;br&gt;DynamoDB: $1&lt;br&gt;CloudWatch: $5" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#E7F5FF;strokeColor=#0066CC;fontSize=9;align=left;" vertex="1" parent="1">
+          <mxGeometry x="1050" y="470" width="110" height="60" as="geometry" />
+        </mxCell>
+
+        <!-- Legend -->
+        <mxCell id="legend-box" value="" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#F5F5F5;strokeColor=#666666;" vertex="1" parent="1">
+          <mxGeometry x="420" y="785" width="200" height="50" as="geometry" />
+        </mxCell>
+        <mxCell id="legend-title" value="&lt;b&gt;MVP Scope&lt;/b&gt;" style="text;html=1;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;whiteSpace=wrap;rounded=0;fontSize=10;" vertex="1" parent="1">
+          <mxGeometry x="430" y="790" width="80" height="15" as="geometry" />
+        </mxCell>
+
+        <mxCell id="legend-1" value="• 1 Editor • 1 Problem Type • 5 Tools • Shadow Mode" style="text;html=1;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;whiteSpace=wrap;rounded=0;fontSize=9;" vertex="1" parent="1">
+          <mxGeometry x="430" y="808" width="180" height="20" as="geometry" />
+        </mxCell>
+
+      </root>
+    </mxGraphModel>
+  </diagram>
+</mxfile>
