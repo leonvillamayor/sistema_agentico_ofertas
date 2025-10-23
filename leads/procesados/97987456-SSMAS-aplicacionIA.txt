@@ -1,0 +1,18 @@
+Nombre Empresa: SSMAS
+URL empresa: https://ssmas.com/es/
+
+Necesidad 1: SSMAS está interesado en aplicar Machine Learning en su organización. Plantear 10 casos de uso con su descripción completa para su aplicación.
+
+Necesidad 2: SSMAS está interesado en aplicar IA Generativa en su organización. Plantear 10 casos de uso con su descripción completa para su aplicación.
+
+Necesidad 3: Implementar un sistema de análisis predictivo para optimizar la cadena de suministro y reducir costos operativos.
+
+Necesidad 4: Desarrollar una plataforma de procesamiento de datos en tiempo real para mejorar la toma de decisiones empresariales.
+
+---
+PROCESADO: 2025-10-23
+DOCUMENTOS GENERADOS:
+- 97987456-MLCasoUso-23102025.md (Machine Learning - 10 Casos de Uso)
+- 97987456-IAGenerat-23102025.md (IA Generativa - 10 Casos de Uso)
+- 97987456-Predictiv-23102025.md (Análisis Predictivo para Supply Chain)
+- 97987456-RealTime-23102025.md (Procesamiento de Datos en Tiempo Real)

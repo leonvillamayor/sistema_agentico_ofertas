@@ -1,0 +1,90 @@
+{
+  "hooks": [
+    {
+      "name": "pre-lead-analysis",
+      "description": "Valida estructura y archivos antes del análisis de leads",
+      "trigger": "PreToolUse",
+      "toolPattern": "Task",
+      "filterPattern": "orquestador",
+      "script": ".claude/hooks/pre-lead-analysis.sh",
+      "enabled": true
+    },
+    {
+      "name": "validate-opportunity-document",
+      "description": "Valida documentos de oportunidad antes de guardarlos",
+      "trigger": "PreToolUse",
+      "toolPattern": "Write",
+      "filterPattern": "oportunidades/.*/.*\\.md",
+      "script": ".claude/hooks/validate-opportunity-doc.sh",
+      "enabled": true,
+      "blockOnFailure": false
+    },
+    {
+      "name": "post-lead-processing",
+      "description": "Verifica completitud después de procesar cada lead",
+      "trigger": "PostToolUse",
+      "toolPattern": "Task",
+      "filterPattern": "arquitecto_soluciones_leads",
+      "script": ".claude/hooks/post-lead-processing.sh",
+      "enabled": true
+    },
+    {
+      "name": "directory-structure-guard",
+      "description": "Previene modificación de estructura crítica",
+      "trigger": "PreToolUse",
+      "toolPattern": "Bash",
+      "filterPattern": "rm.*leads|rmdir.*leads|rm.*oportunidades",
+      "action": "block",
+      "message": "⚠️ Acción bloqueada: No se permite eliminar directorios críticos del sistema",
+      "enabled": true
+    },
+    {
+      "name": "aws-service-validation",
+      "description": "Valida que los documentos mencionen servicios AWS apropiados",
+      "trigger": "PreToolUse",
+      "toolPattern": "MultiEdit|Edit",
+      "filterPattern": "oportunidades/.*/.*\\.md",
+      "validation": {
+        "requiresContent": ["AWS", "Amazon", "servicio"],
+        "minOccurrences": 3
+      },
+      "enabled": true
+    },
+    {
+      "name": "backup-before-move",
+      "description": "Crea backup antes de mover archivos procesados",
+      "trigger": "PreToolUse",
+      "toolPattern": "Bash",
+      "filterPattern": "mv.*leads/pendientes.*leads/procesados",
+      "script": "cp -p \"$1\" \".backups/$(date +%Y%m%d_%H%M%S)_$(basename \"$1\")\"",
+      "enabled": true
+    },
+    {
+      "name": "validate-diagrams-generation",
+      "description": "Valida la generación completa de diagramas",
+      "trigger": "PostToolUse",
+      "toolPattern": "Task",
+      "filterPattern": "diagramador",
+      "script": ".claude/hooks/validate-diagrams.sh",
+      "enabled": true
+    },
+    {
+      "name": "validate-drawio-format",
+      "description": "Valida formato de archivos draw.io antes de guardar",
+      "trigger": "PreToolUse",
+      "toolPattern": "Write",
+      "filterPattern": ".*\\.drawio$",
+      "validation": {
+        "requiresContent": ["<?xml version", "<mxfile", "<diagram"],
+        "minSize": 500
+      },
+      "enabled": true
+    }
+  ],
+  "globalSettings": {
+    "logLevel": "info",
+    "notificationsEnabled": true,
+    "blockOnError": false,
+    "timeout": 30
+  }
+}

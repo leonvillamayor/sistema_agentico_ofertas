@@ -1,0 +1,22 @@
+En el documento Documentacion/SSMAS_casos_uso_IA.pdf, En la pagina 15,16,17,18,19 aparece descrito el segundocaso de uso. 
+Necesito que generes un documento markdown en proyectos, donde se explique el caso de uso de forma general, con todo tipo de detalles, 
+y se genere la arquitectura funcional para el caso de uso. Adicionalmente, generaras un documento drawio que contenga esta arquitectura funcional.
+
+Generaras un documento en proyecto para la arquitectura tecnica en AWS, donde se explique en profundidad cada uno de los componentes utilizados.
+Adicionalmente, generaras un documento drawio que contenga esta arquitectura funcional.
+
+
+Para la la realización de los documentos de arquitectura funcional y tecnica, consultaras consultaras el documento Documentacion/SSMAS_casos_uso_IA.pdf,
+la documentación tecnica en linea de aws y usaras las herramientas que dispongas para verificar que cada servicio AWS identificado 
+en el documento se aplica correctamente y utiliza las arquitecturas de referencia para cada servicio. 
+
+***No es necesario incluir codigo***. 
+
+Recuerda que cuando propongamos la operativización, el primer paso es implantar la landing zone. Consulta la documentación de AWS y utiliza las herramientas que dispongas para este punto.
+
+Adicionalmente, es necesario que describas la arquitectura funcional para cada una de las fases incluidas en el documento Documentacion/SSMAS_casos_uso_IA.pdf
+generes por cada fase la arquitectura tecnica con drawio.
+
+Cuando tengas que generar diagramas de drawio, primero consultaras la documentación de aws para entender como plantea y aplica formato aws para
+la realizacion de este tipo de diagramas y utiliza el resultado de las consultas para que los diagramas de drawio utilicen las buenas practicas 
+que recomienda AWS para este tipo de diagramas. 

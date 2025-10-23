@@ -1,0 +1,297 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<mxfile host="app.diagrams.net" modified="2024-01-01T00:00:00.000Z" agent="5.0" etag="arquitectura_funcional_adops" version="21.0.0" type="device">
+  <diagram name="Arquitectura Funcional - Agente AdOps Autónomo" id="arquitectura-funcional">
+    <mxGraphModel dx="1422" dy="754" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="1169" pageHeight="827" math="0" shadow="0">
+      <root>
+        <mxCell id="0" />
+        <mxCell id="1" parent="0" />
+
+        <!-- Título -->
+        <mxCell id="title-1" value="ARQUITECTURA FUNCIONAL - AGENTE DE ADOPS AUTÓNOMO" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;fontSize=20;fontStyle=1;fontColor=#1a1a1a;" parent="1" vertex="1">
+          <mxGeometry x="320" y="20" width="550" height="40" as="geometry" />
+        </mxCell>
+
+        <!-- Capa 1: Monitorización y Detección -->
+        <mxCell id="layer-1" value="" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#e1f5fe;strokeColor=#01579b;strokeWidth=2;opacity=30;" parent="1" vertex="1">
+          <mxGeometry x="80" y="100" width="1000" height="120" as="geometry" />
+        </mxCell>
+
+        <mxCell id="layer-1-title" value="CAPA DE MONITORIZACIÓN Y DETECCIÓN" style="text;html=1;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;whiteSpace=wrap;rounded=0;fontStyle=1;fontSize=14;fontColor=#01579b;" parent="1" vertex="1">
+          <mxGeometry x="90" y="105" width="320" height="20" as="geometry" />
+        </mxCell>
+
+        <!-- Componentes de Monitorización -->
+        <mxCell id="metric-1" value="Métricas de&lt;br&gt;Negocio&lt;br&gt;(RPM, Fill Rate)" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#fff3e0;strokeColor=#e65100;strokeWidth=2;" parent="1" vertex="1">
+          <mxGeometry x="120" y="140" width="120" height="60" as="geometry" />
+        </mxCell>
+
+        <mxCell id="metric-2" value="Métricas de&lt;br&gt;Performance&lt;br&gt;(Latencia, Errors)" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#fff3e0;strokeColor=#e65100;strokeWidth=2;" parent="1" vertex="1">
+          <mxGeometry x="260" y="140" width="120" height="60" as="geometry" />
+        </mxCell>
+
+        <mxCell id="metric-3" value="Métricas de&lt;br&gt;Partners&lt;br&gt;(DSP, SSP)" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#fff3e0;strokeColor=#e65100;strokeWidth=2;" parent="1" vertex="1">
+          <mxGeometry x="400" y="140" width="120" height="60" as="geometry" />
+        </mxCell>
+
+        <mxCell id="detection-1" value="Sistema de&lt;br&gt;Detección de&lt;br&gt;Anomalías" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#ffebee;strokeColor=#c62828;strokeWidth=2;" parent="1" vertex="1">
+          <mxGeometry x="540" y="140" width="120" height="60" as="geometry" />
+        </mxCell>
+
+        <mxCell id="alert-1" value="Generador de&lt;br&gt;Alertas&lt;br&gt;Contextualizadas" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#ffebee;strokeColor=#c62828;strokeWidth=2;" parent="1" vertex="1">
+          <mxGeometry x="680" y="140" width="120" height="60" as="geometry" />
+        </mxCell>
+
+        <mxCell id="threshold-1" value="Umbrales&lt;br&gt;Dinámicos&lt;br&gt;ML" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#f3e5f5;strokeColor=#6a1b9a;strokeWidth=2;" parent="1" vertex="1">
+          <mxGeometry x="820" y="140" width="120" height="60" as="geometry" />
+        </mxCell>
+
+        <mxCell id="dashboard-1" value="Dashboard&lt;br&gt;Tiempo Real" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#e8f5e9;strokeColor=#2e7d32;strokeWidth=2;" parent="1" vertex="1">
+          <mxGeometry x="960" y="140" width="100" height="60" as="geometry" />
+        </mxCell>
+
+        <!-- Capa 2: Orquestación Inteligente -->
+        <mxCell id="layer-2" value="" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#f3e5f5;strokeColor=#6a1b9a;strokeWidth=2;opacity=30;" parent="1" vertex="1">
+          <mxGeometry x="80" y="250" width="1000" height="150" as="geometry" />
+        </mxCell>
+
+        <mxCell id="layer-2-title" value="CAPA DE ORQUESTACIÓN INTELIGENTE" style="text;html=1;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;whiteSpace=wrap;rounded=0;fontStyle=1;fontSize=14;fontColor=#6a1b9a;" parent="1" vertex="1">
+          <mxGeometry x="90" y="255" width="300" height="20" as="geometry" />
+        </mxCell>
+
+        <!-- Motor de Orquestación -->
+        <mxCell id="orchestrator" value="MOTOR DE ORQUESTACIÓN&lt;br&gt;(Amazon Bedrock Agent)" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#e1bee7;strokeColor=#6a1b9a;strokeWidth=3;fontSize=12;fontStyle=1;" parent="1" vertex="1">
+          <mxGeometry x="440" y="290" width="280" height="80" as="geometry" />
+        </mxCell>
+
+        <!-- Componentes del Orquestador -->
+        <mxCell id="nlp-1" value="Procesamiento&lt;br&gt;Lenguaje Natural" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#fce4ec;strokeColor=#ad1457;strokeWidth=2;" parent="1" vertex="1">
+          <mxGeometry x="120" y="310" width="100" height="50" as="geometry" />
+        </mxCell>
+
+        <mxCell id="reasoning-1" value="Razonamiento&lt;br&gt;y Decisión" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#fce4ec;strokeColor=#ad1457;strokeWidth=2;" parent="1" vertex="1">
+          <mxGeometry x="240" y="310" width="100" height="50" as="geometry" />
+        </mxCell>
+
+        <mxCell id="context-1" value="Gestión de&lt;br&gt;Contexto" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#fce4ec;strokeColor=#ad1457;strokeWidth=2;" parent="1" vertex="1">
+          <mxGeometry x="360" y="310" width="70" height="50" as="geometry" />
+        </mxCell>
+
+        <mxCell id="priority-1" value="Priorización&lt;br&gt;Inteligente" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#fce4ec;strokeColor=#ad1457;strokeWidth=2;" parent="1" vertex="1">
+          <mxGeometry x="730" y="310" width="90" height="50" as="geometry" />
+        </mxCell>
+
+        <mxCell id="knowledge-1" value="Base de&lt;br&gt;Conocimiento" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#fce4ec;strokeColor=#ad1457;strokeWidth=2;" parent="1" vertex="1">
+          <mxGeometry x="840" y="310" width="90" height="50" as="geometry" />
+        </mxCell>
+
+        <mxCell id="learning-1" value="Aprendizaje&lt;br&gt;Continuo" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#fce4ec;strokeColor=#ad1457;strokeWidth=2;" parent="1" vertex="1">
+          <mxGeometry x="950" y="310" width="90" height="50" as="geometry" />
+        </mxCell>
+
+        <!-- Capa 3: Diagnóstico y Análisis -->
+        <mxCell id="layer-3" value="" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#fff3e0;strokeColor=#e65100;strokeWidth=2;opacity=30;" parent="1" vertex="1">
+          <mxGeometry x="80" y="430" width="1000" height="120" as="geometry" />
+        </mxCell>
+
+        <mxCell id="layer-3-title" value="CAPA DE DIAGNÓSTICO Y ANÁLISIS" style="text;html=1;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;whiteSpace=wrap;rounded=0;fontStyle=1;fontSize=14;fontColor=#e65100;" parent="1" vertex="1">
+          <mxGeometry x="90" y="435" width="280" height="20" as="geometry" />
+        </mxCell>
+
+        <!-- Herramientas de Diagnóstico -->
+        <mxCell id="tool-1" value="Verificación&lt;br&gt;Configuración" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#fff8e1;strokeColor=#f57c00;strokeWidth=2;" parent="1" vertex="1">
+          <mxGeometry x="120" y="470" width="100" height="50" as="geometry" />
+        </mxCell>
+
+        <mxCell id="tool-2" value="Análisis&lt;br&gt;de Logs" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#fff8e1;strokeColor=#f57c00;strokeWidth=2;" parent="1" vertex="1">
+          <mxGeometry x="240" y="470" width="100" height="50" as="geometry" />
+        </mxCell>
+
+        <mxCell id="tool-3" value="Comprobación&lt;br&gt;Latencia" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#fff8e1;strokeColor=#f57c00;strokeWidth=2;" parent="1" vertex="1">
+          <mxGeometry x="360" y="470" width="100" height="50" as="geometry" />
+        </mxCell>
+
+        <mxCell id="tool-4" value="Validación&lt;br&gt;APIs" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#fff8e1;strokeColor=#f57c00;strokeWidth=2;" parent="1" vertex="1">
+          <mxGeometry x="480" y="470" width="100" height="50" as="geometry" />
+        </mxCell>
+
+        <mxCell id="tool-5" value="Análisis&lt;br&gt;Tráfico" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#fff8e1;strokeColor=#f57c00;strokeWidth=2;" parent="1" vertex="1">
+          <mxGeometry x="600" y="470" width="100" height="50" as="geometry" />
+        </mxCell>
+
+        <mxCell id="tool-6" value="Correlación&lt;br&gt;Eventos" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#fff8e1;strokeColor=#f57c00;strokeWidth=2;" parent="1" vertex="1">
+          <mxGeometry x="720" y="470" width="100" height="50" as="geometry" />
+        </mxCell>
+
+        <mxCell id="tool-7" value="Root Cause&lt;br&gt;Analysis" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#ffccbc;strokeColor=#bf360c;strokeWidth=2;" parent="1" vertex="1">
+          <mxGeometry x="840" y="470" width="100" height="50" as="geometry" />
+        </mxCell>
+
+        <mxCell id="tool-8" value="Simulación&lt;br&gt;Escenarios" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#fff8e1;strokeColor=#f57c00;strokeWidth=2;" parent="1" vertex="1">
+          <mxGeometry x="960" y="470" width="100" height="50" as="geometry" />
+        </mxCell>
+
+        <!-- Capa 4: Remediación y Acción -->
+        <mxCell id="layer-4" value="" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#e8f5e9;strokeColor=#2e7d32;strokeWidth=2;opacity=30;" parent="1" vertex="1">
+          <mxGeometry x="80" y="580" width="1000" height="120" as="geometry" />
+        </mxCell>
+
+        <mxCell id="layer-4-title" value="CAPA DE REMEDIACIÓN Y ACCIÓN" style="text;html=1;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;whiteSpace=wrap;rounded=0;fontStyle=1;fontSize=14;fontColor=#2e7d32;" parent="1" vertex="1">
+          <mxGeometry x="90" y="585" width="280" height="20" as="geometry" />
+        </mxCell>
+
+        <!-- Acciones de Remediación -->
+        <mxCell id="action-1" value="Desactivar&lt;br&gt;Partner" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#c8e6c9;strokeColor=#388e3c;strokeWidth=2;" parent="1" vertex="1">
+          <mxGeometry x="120" y="620" width="100" height="50" as="geometry" />
+        </mxCell>
+
+        <mxCell id="action-2" value="Limpiar&lt;br&gt;Cache" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#c8e6c9;strokeColor=#388e3c;strokeWidth=2;" parent="1" vertex="1">
+          <mxGeometry x="240" y="620" width="100" height="50" as="geometry" />
+        </mxCell>
+
+        <mxCell id="action-3" value="Reiniciar&lt;br&gt;Servicios" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#c8e6c9;strokeColor=#388e3c;strokeWidth=2;" parent="1" vertex="1">
+          <mxGeometry x="360" y="620" width="100" height="50" as="geometry" />
+        </mxCell>
+
+        <mxCell id="action-4" value="Ajustar&lt;br&gt;Config" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#c8e6c9;strokeColor=#388e3c;strokeWidth=2;" parent="1" vertex="1">
+          <mxGeometry x="480" y="620" width="100" height="50" as="geometry" />
+        </mxCell>
+
+        <mxCell id="action-5" value="Throttling&lt;br&gt;Selectivo" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#c8e6c9;strokeColor=#388e3c;strokeWidth=2;" parent="1" vertex="1">
+          <mxGeometry x="600" y="620" width="100" height="50" as="geometry" />
+        </mxCell>
+
+        <mxCell id="action-6" value="Rollback&lt;br&gt;Cambios" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#c8e6c9;strokeColor=#388e3c;strokeWidth=2;" parent="1" vertex="1">
+          <mxGeometry x="720" y="620" width="100" height="50" as="geometry" />
+        </mxCell>
+
+        <mxCell id="validation-1" value="Validación&lt;br&gt;Post-Acción" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#a5d6a7;strokeColor=#1b5e20;strokeWidth=2;" parent="1" vertex="1">
+          <mxGeometry x="840" y="620" width="100" height="50" as="geometry" />
+        </mxCell>
+
+        <mxCell id="escalation-1" value="Escalado a&lt;br&gt;Humano" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#ffcc80;strokeColor=#ef6c00;strokeWidth=2;" parent="1" vertex="1">
+          <mxGeometry x="960" y="620" width="100" height="50" as="geometry" />
+        </mxCell>
+
+        <!-- Capa 5: Notificación y Reporting -->
+        <mxCell id="layer-5" value="" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#e0f2f1;strokeColor=#00695c;strokeWidth=2;opacity=30;" parent="1" vertex="1">
+          <mxGeometry x="80" y="730" width="1000" height="80" as="geometry" />
+        </mxCell>
+
+        <mxCell id="layer-5-title" value="CAPA DE NOTIFICACIÓN Y REPORTING" style="text;html=1;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;whiteSpace=wrap;rounded=0;fontStyle=1;fontSize=14;fontColor=#00695c;" parent="1" vertex="1">
+          <mxGeometry x="90" y="735" width="280" height="20" as="geometry" />
+        </mxCell>
+
+        <!-- Componentes de Notificación -->
+        <mxCell id="notify-1" value="Notificación&lt;br&gt;Email/SMS" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#b2dfdb;strokeColor=#00796b;strokeWidth=2;" parent="1" vertex="1">
+          <mxGeometry x="120" y="760" width="100" height="40" as="geometry" />
+        </mxCell>
+
+        <mxCell id="notify-2" value="Integración&lt;br&gt;Slack/Teams" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#b2dfdb;strokeColor=#00796b;strokeWidth=2;" parent="1" vertex="1">
+          <mxGeometry x="240" y="760" width="100" height="40" as="geometry" />
+        </mxCell>
+
+        <mxCell id="notify-3" value="Tickets&lt;br&gt;ITSM" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#b2dfdb;strokeColor=#00796b;strokeWidth=2;" parent="1" vertex="1">
+          <mxGeometry x="360" y="760" width="100" height="40" as="geometry" />
+        </mxCell>
+
+        <mxCell id="report-1" value="Informe&lt;br&gt;Resolución" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#b2dfdb;strokeColor=#00796b;strokeWidth=2;" parent="1" vertex="1">
+          <mxGeometry x="480" y="760" width="100" height="40" as="geometry" />
+        </mxCell>
+
+        <mxCell id="report-2" value="Dashboard&lt;br&gt;Ejecutivo" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#b2dfdb;strokeColor=#00796b;strokeWidth=2;" parent="1" vertex="1">
+          <mxGeometry x="600" y="760" width="100" height="40" as="geometry" />
+        </mxCell>
+
+        <mxCell id="report-3" value="Métricas&lt;br&gt;Performance" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#b2dfdb;strokeColor=#00796b;strokeWidth=2;" parent="1" vertex="1">
+          <mxGeometry x="720" y="760" width="100" height="40" as="geometry" />
+        </mxCell>
+
+        <mxCell id="report-4" value="Log de&lt;br&gt;Auditoría" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#b2dfdb;strokeColor=#00796b;strokeWidth=2;" parent="1" vertex="1">
+          <mxGeometry x="840" y="760" width="100" height="40" as="geometry" />
+        </mxCell>
+
+        <mxCell id="report-5" value="Analytics&lt;br&gt;BI" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#b2dfdb;strokeColor=#00796b;strokeWidth=2;" parent="1" vertex="1">
+          <mxGeometry x="960" y="760" width="100" height="40" as="geometry" />
+        </mxCell>
+
+        <!-- Flujos de Datos -->
+        <mxCell id="flow-1" value="" style="endArrow=classic;html=1;strokeWidth=2;strokeColor=#1976d2;curved=1;" parent="1" edge="1">
+          <mxGeometry width="50" height="50" relative="1" as="geometry">
+            <mxPoint x="580" y="200" as="sourcePoint" />
+            <mxPoint x="580" y="290" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+
+        <mxCell id="flow-2" value="" style="endArrow=classic;html=1;strokeWidth=2;strokeColor=#7b1fa2;curved=1;" parent="1" edge="1">
+          <mxGeometry width="50" height="50" relative="1" as="geometry">
+            <mxPoint x="580" y="370" as="sourcePoint" />
+            <mxPoint x="580" y="470" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+
+        <mxCell id="flow-3" value="" style="endArrow=classic;html=1;strokeWidth=2;strokeColor=#f57c00;curved=1;" parent="1" edge="1">
+          <mxGeometry width="50" height="50" relative="1" as="geometry">
+            <mxPoint x="580" y="520" as="sourcePoint" />
+            <mxPoint x="580" y="620" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+
+        <mxCell id="flow-4" value="" style="endArrow=classic;html=1;strokeWidth=2;strokeColor=#388e3c;curved=1;" parent="1" edge="1">
+          <mxGeometry width="50" height="50" relative="1" as="geometry">
+            <mxPoint x="580" y="670" as="sourcePoint" />
+            <mxPoint x="580" y="760" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+
+        <!-- Flujo de Retroalimentación -->
+        <mxCell id="feedback-1" value="" style="endArrow=classic;html=1;strokeWidth=2;strokeColor=#d32f2f;curved=1;dashed=1;" parent="1" edge="1">
+          <mxGeometry width="50" height="50" relative="1" as="geometry">
+            <mxPoint x="1000" y="760" as="sourcePoint" />
+            <mxPoint x="1000" y="360" as="targetPoint" />
+            <Array as="points">
+              <mxPoint x="1100" y="560" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+
+        <mxCell id="feedback-label" value="Feedback Loop" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;fontSize=11;fontColor=#d32f2f;" parent="1" vertex="1">
+          <mxGeometry x="1020" y="550" width="90" height="20" as="geometry" />
+        </mxCell>
+
+        <!-- Leyenda -->
+        <mxCell id="legend" value="LEYENDA:" style="text;html=1;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;whiteSpace=wrap;rounded=0;fontStyle=1;fontSize=12;" parent="1" vertex="1">
+          <mxGeometry x="80" y="830" width="70" height="20" as="geometry" />
+        </mxCell>
+
+        <mxCell id="legend-1" value="Monitorización" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#fff3e0;strokeColor=#e65100;strokeWidth=1;fontSize=10;" parent="1" vertex="1">
+          <mxGeometry x="150" y="825" width="80" height="25" as="geometry" />
+        </mxCell>
+
+        <mxCell id="legend-2" value="Orquestación" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#f3e5f5;strokeColor=#6a1b9a;strokeWidth=1;fontSize=10;" parent="1" vertex="1">
+          <mxGeometry x="240" y="825" width="80" height="25" as="geometry" />
+        </mxCell>
+
+        <mxCell id="legend-3" value="Diagnóstico" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#fff8e1;strokeColor=#f57c00;strokeWidth=1;fontSize=10;" parent="1" vertex="1">
+          <mxGeometry x="330" y="825" width="80" height="25" as="geometry" />
+        </mxCell>
+
+        <mxCell id="legend-4" value="Remediación" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#c8e6c9;strokeColor=#388e3c;strokeWidth=1;fontSize=10;" parent="1" vertex="1">
+          <mxGeometry x="420" y="825" width="80" height="25" as="geometry" />
+        </mxCell>
+
+        <mxCell id="legend-5" value="Notificación" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#b2dfdb;strokeColor=#00796b;strokeWidth=1;fontSize=10;" parent="1" vertex="1">
+          <mxGeometry x="510" y="825" width="80" height="25" as="geometry" />
+        </mxCell>
+
+        <mxCell id="legend-flow" value="→ Flujo Principal" style="text;html=1;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;whiteSpace=wrap;rounded=0;fontSize=10;" parent="1" vertex="1">
+          <mxGeometry x="600" y="825" width="90" height="25" as="geometry" />
+        </mxCell>
+
+        <mxCell id="legend-feedback" value="⟲ Retroalimentación" style="text;html=1;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;whiteSpace=wrap;rounded=0;fontSize=10;" parent="1" vertex="1">
+          <mxGeometry x="700" y="825" width="110" height="25" as="geometry" />
+        </mxCell>
+
+      </root>
+    </mxGraphModel>
+  </diagram>
+</mxfile>

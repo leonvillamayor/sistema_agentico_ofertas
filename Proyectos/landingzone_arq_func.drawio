@@ -1,0 +1,240 @@
+<mxfile host="app.diagrams.net" modified="2024-01-15T00:00:00.000Z" agent="5.0" etag="xxx" version="22.1.16" type="device">
+  <diagram name="AWS Landing Zone - Functional Architecture" id="functional-architecture">
+    <mxGraphModel dx="2074" dy="1194" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="1920" pageHeight="1080" math="0" shadow="0">
+      <root>
+        <mxCell id="0" />
+        <mxCell id="1" parent="0" />
+
+        <!-- AWS Cloud Container -->
+        <mxCell id="aws-cloud" value="" style="sketch=0;outlineConnect=0;gradientColor=none;html=1;whiteSpace=wrap;fontSize=12;fontStyle=0;shape=mxgraph.aws4.group;grIcon=mxgraph.aws4.group_aws_cloud;strokeColor=#232F3E;fillColor=none;verticalAlign=top;align=left;spacingLeft=30;fontColor=#232F3E;dashed=0;labelPosition=center;verticalLabelPosition=top;" vertex="1" parent="1">
+          <mxGeometry x="50" y="50" width="1820" height="980" as="geometry" />
+        </mxCell>
+
+        <!-- Organization Root -->
+        <mxCell id="org-root" value="SSMAS AWS Organization&#xa;(Root Account)" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#FF9900;strokeColor=#232F3E;fontColor=white;fontSize=16;fontStyle=1;" vertex="1" parent="1">
+          <mxGeometry x="860" y="80" width="200" height="60" as="geometry" />
+        </mxCell>
+
+        <!-- Control Tower Governance -->
+        <mxCell id="control-tower" value="AWS Control Tower Governance&#xa;• Service Catalog &amp; Account Factory&#xa;• Guardrails &amp; Compliance&#xa;• Cross-Account Role Management" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#146EB4;strokeColor=#0E4B99;fontColor=white;fontSize=12;" vertex="1" parent="1">
+          <mxGeometry x="760" y="170" width="400" height="80" as="geometry" />
+        </mxCell>
+
+        <!-- Security OU -->
+        <mxCell id="security-ou" value="" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#FFE6CC;strokeColor=#D79B00;verticalAlign=top;fontSize=14;fontStyle=1;" vertex="1" parent="1">
+          <mxGeometry x="100" y="300" width="450" height="300" as="geometry" />
+        </mxCell>
+        <mxCell id="security-ou-label" value="SECURITY OU" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;fontSize=16;fontStyle=1;fontColor=#D79B00;" vertex="1" parent="1">
+          <mxGeometry x="280" y="310" width="90" height="30" as="geometry" />
+        </mxCell>
+
+        <!-- Log Archive Account -->
+        <mxCell id="log-archive" value="Log Archive Account&#xa;&#xa;• CloudTrail Logs&#xa;• VPC Flow Logs&#xa;• Application Logs&#xa;• Compliance Archives&#xa;• Long-term Retention" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#F58534;strokeColor=#BB6711;fontColor=white;fontSize=11;" vertex="1" parent="1">
+          <mxGeometry x="120" y="350" width="180" height="120" as="geometry" />
+        </mxCell>
+
+        <!-- Audit Account -->
+        <mxCell id="audit-account" value="Audit Account&#xa;&#xa;• AWS Config Central&#xa;• Security Hub Console&#xa;• GuardDuty Central&#xa;• Inspector Findings&#xa;• Compliance Dashboard" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#F58534;strokeColor=#BB6711;fontColor=white;fontSize=11;" vertex="1" parent="1">
+          <mxGeometry x="330" y="350" width="180" height="120" as="geometry" />
+        </mxCell>
+
+        <!-- Infrastructure OU -->
+        <mxCell id="infrastructure-ou" value="" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#E1F5FE;strokeColor=#01579B;verticalAlign=top;fontSize=14;fontStyle=1;" vertex="1" parent="1">
+          <mxGeometry x="600" y="300" width="650" height="300" as="geometry" />
+        </mxCell>
+        <mxCell id="infrastructure-ou-label" value="INFRASTRUCTURE OU" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;fontSize=16;fontStyle=1;fontColor=#01579B;" vertex="1" parent="1">
+          <mxGeometry x="880" y="310" width="150" height="30" as="geometry" />
+        </mxCell>
+
+        <!-- Network Account -->
+        <mxCell id="network-account" value="Network Account&#xa;&#xa;• Transit Gateway&#xa;• Direct Connect&#xa;• VPN Gateway&#xa;• Network ACLs&#xa;• Security Groups&#xa;• NAT Gateways" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#4FC3F7;strokeColor=#0277BD;fontColor=white;fontSize=11;" vertex="1" parent="1">
+          <mxGeometry x="620" y="350" width="180" height="120" as="geometry" />
+        </mxCell>
+
+        <!-- Shared Services Account -->
+        <mxCell id="shared-services" value="Shared Services Account&#xa;&#xa;• Route 53&#xa;• Certificate Manager&#xa;• Secrets Manager&#xa;• Parameter Store&#xa;• Image Builder&#xa;• Artifact Repository" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#4FC3F7;strokeColor=#0277BD;fontColor=white;fontSize=11;" vertex="1" parent="1">
+          <mxGeometry x="820" y="350" width="180" height="120" as="geometry" />
+        </mxCell>
+
+        <!-- DNS Account -->
+        <mxCell id="dns-account" value="DNS Account&#xa;&#xa;• Domain Management&#xa;• DNS Resolver&#xa;• Private Zones&#xa;• Public Zones&#xa;• Health Checks" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#4FC3F7;strokeColor=#0277BD;fontColor=white;fontSize=11;" vertex="1" parent="1">
+          <mxGeometry x="1020" y="350" width="180" height="120" as="geometry" />
+        </mxCell>
+
+        <!-- Workloads OU -->
+        <mxCell id="workloads-ou" value="" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#F3E5F5;strokeColor=#4A148C;verticalAlign=top;fontSize=14;fontStyle=1;" vertex="1" parent="1">
+          <mxGeometry x="1300" y="300" width="550" height="700" as="geometry" />
+        </mxCell>
+        <mxCell id="workloads-ou-label" value="WORKLOADS OU" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;fontSize=16;fontStyle=1;fontColor=#4A148C;" vertex="1" parent="1">
+          <mxGeometry x="1490" y="310" width="130" height="30" as="geometry" />
+        </mxCell>
+
+        <!-- Production OU -->
+        <mxCell id="production-ou" value="" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#E8F5E8;strokeColor=#388E3C;verticalAlign=top;fontSize=12;fontStyle=1;" vertex="1" parent="1">
+          <mxGeometry x="1320" y="350" width="510" height="180" as="geometry" />
+        </mxCell>
+        <mxCell id="production-ou-label" value="PRODUCTION OU" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;fontSize=14;fontStyle=1;fontColor=#388E3C;" vertex="1" parent="1">
+          <mxGeometry x="1530" y="360" width="120" height="20" as="geometry" />
+        </mxCell>
+
+        <!-- Production Accounts -->
+        <mxCell id="ml-prod" value="ML Production&#xa;&#xa;• SageMaker&#xa;• Bedrock&#xa;• ML Endpoints" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#81C784;strokeColor=#388E3C;fontColor=white;fontSize=10;" vertex="1" parent="1">
+          <mxGeometry x="1340" y="390" width="140" height="80" as="geometry" />
+        </mxCell>
+
+        <mxCell id="adops-prod" value="AdOps Production&#xa;&#xa;• AdOps APIs&#xa;• Monitoring&#xa;• Dashboards" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#81C784;strokeColor=#388E3C;fontColor=white;fontSize=10;" vertex="1" parent="1">
+          <mxGeometry x="1500" y="390" width="140" height="80" as="geometry" />
+        </mxCell>
+
+        <mxCell id="data-prod" value="Data Production&#xa;&#xa;• Data Lake&#xa;• Kinesis&#xa;• Glue ETL" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#81C784;strokeColor=#388E3C;fontColor=white;fontSize=10;" vertex="1" parent="1">
+          <mxGeometry x="1660" y="390" width="140" height="80" as="geometry" />
+        </mxCell>
+
+        <!-- Staging OU -->
+        <mxCell id="staging-ou" value="" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#FFF3E0;strokeColor=#E65100;verticalAlign=top;fontSize=12;fontStyle=1;" vertex="1" parent="1">
+          <mxGeometry x="1320" y="550" width="510" height="180" as="geometry" />
+        </mxCell>
+        <mxCell id="staging-ou-label" value="STAGING OU" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;fontSize=14;fontStyle=1;fontColor=#E65100;" vertex="1" parent="1">
+          <mxGeometry x="1540" y="560" width="100" height="20" as="geometry" />
+        </mxCell>
+
+        <!-- Staging Accounts -->
+        <mxCell id="ml-stage" value="ML Staging&#xa;Account" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#FFB74D;strokeColor=#E65100;fontColor=white;fontSize=10;" vertex="1" parent="1">
+          <mxGeometry x="1340" y="590" width="140" height="60" as="geometry" />
+        </mxCell>
+
+        <mxCell id="adops-stage" value="AdOps Staging&#xa;Account" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#FFB74D;strokeColor=#E65100;fontColor=white;fontSize=10;" vertex="1" parent="1">
+          <mxGeometry x="1500" y="590" width="140" height="60" as="geometry" />
+        </mxCell>
+
+        <mxCell id="data-stage" value="Data Staging&#xa;Account" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#FFB74D;strokeColor=#E65100;fontColor=white;fontSize=10;" vertex="1" parent="1">
+          <mxGeometry x="1660" y="590" width="140" height="60" as="geometry" />
+        </mxCell>
+
+        <!-- Development OU -->
+        <mxCell id="development-ou" value="" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#E3F2FD;strokeColor=#1976D2;verticalAlign=top;fontSize=12;fontStyle=1;" vertex="1" parent="1">
+          <mxGeometry x="1320" y="750" width="510" height="180" as="geometry" />
+        </mxCell>
+        <mxCell id="development-ou-label" value="DEVELOPMENT OU" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;fontSize=14;fontStyle=1;fontColor=#1976D2;" vertex="1" parent="1">
+          <mxGeometry x="1520" y="760" width="140" height="20" as="geometry" />
+        </mxCell>
+
+        <!-- Development Accounts -->
+        <mxCell id="ml-dev" value="ML Development&#xa;Account" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#64B5F6;strokeColor=#1976D2;fontColor=white;fontSize=10;" vertex="1" parent="1">
+          <mxGeometry x="1340" y="790" width="140" height="60" as="geometry" />
+        </mxCell>
+
+        <mxCell id="adops-dev" value="AdOps Development&#xa;Account" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#64B5F6;strokeColor=#1976D2;fontColor=white;fontSize=10;" vertex="1" parent="1">
+          <mxGeometry x="1500" y="790" width="140" height="60" as="geometry" />
+        </mxCell>
+
+        <mxCell id="data-dev" value="Data Development&#xa;Account" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#64B5F6;strokeColor=#1976D2;fontColor=white;fontSize=10;" vertex="1" parent="1">
+          <mxGeometry x="1660" y="790" width="140" height="60" as="geometry" />
+        </mxCell>
+
+        <!-- Sandbox OU -->
+        <mxCell id="sandbox-ou" value="" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#FFF8E1;strokeColor=#F57F17;verticalAlign=top;fontSize=14;fontStyle=1;" vertex="1" parent="1">
+          <mxGeometry x="100" y="650" width="450" height="300" as="geometry" />
+        </mxCell>
+        <mxCell id="sandbox-ou-label" value="SANDBOX OU" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;fontSize=16;fontStyle=1;fontColor=#F57F17;" vertex="1" parent="1">
+          <mxGeometry x="290" y="660" width="110" height="30" as="geometry" />
+        </mxCell>
+
+        <!-- Sandbox Accounts -->
+        <mxCell id="ai-sandbox" value="AI/ML Sandbox Account&#xa;&#xa;• Experimentation&#xa;• Model Testing&#xa;• Algorithm Development&#xa;• Research &amp; Innovation" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#FFCC02;strokeColor=#F57F17;fontColor=white;fontSize=11;" vertex="1" parent="1">
+          <mxGeometry x="120" y="700" width="180" height="120" as="geometry" />
+        </mxCell>
+
+        <mxCell id="general-sandbox" value="General Sandbox Account&#xa;&#xa;• Proof of Concepts&#xa;• Training Environment&#xa;• Testing New Services&#xa;• Learning &amp; Development" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#FFCC02;strokeColor=#F57F17;fontColor=white;fontSize=11;" vertex="1" parent="1">
+          <mxGeometry x="330" y="700" width="180" height="120" as="geometry" />
+        </mxCell>
+
+        <!-- Transit Gateway (Connectivity Hub) -->
+        <mxCell id="transit-gateway" value="Transit Gateway&#xa;(Connectivity Hub)" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#4CAF50;strokeColor=#2E7D32;fontColor=white;fontSize=12;fontStyle=1;" vertex="1" parent="1">
+          <mxGeometry x="650" y="500" width="130" height="60" as="geometry" />
+        </mxCell>
+
+        <!-- Shared Services Layer -->
+        <mxCell id="shared-services-layer" value="Shared Services Layer&#xa;• DNS &amp; Routing  • Certificate Management  • Secrets Management  • Artifact Registry" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#607D8B;strokeColor=#37474F;fontColor=white;fontSize=12;fontStyle=1;" vertex="1" parent="1">
+          <mxGeometry x="600" y="850" width="650" height="60" as="geometry" />
+        </mxCell>
+
+        <!-- Connections/Arrows -->
+        <!-- Root to Control Tower -->
+        <mxCell id="arrow1" value="" style="endArrow=classic;html=1;rounded=0;exitX=0.5;exitY=1;exitDx=0;exitDy=0;entryX=0.5;entryY=0;entryDx=0;entryDy=0;strokeColor=#232F3E;strokeWidth=2;" edge="1" parent="1" source="org-root" target="control-tower">
+          <mxGeometry width="50" height="50" relative="1" as="geometry">
+            <mxPoint x="960" y="150" as="sourcePoint" />
+            <mxPoint x="960" y="170" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+
+        <!-- Control Tower to OUs -->
+        <mxCell id="arrow2" value="" style="endArrow=classic;html=1;rounded=0;exitX=0.2;exitY=1;exitDx=0;exitDy=0;entryX=0.5;entryY=0;entryDx=0;entryDy=0;strokeColor=#232F3E;strokeWidth=2;" edge="1" parent="1" source="control-tower" target="security-ou">
+          <mxGeometry width="50" height="50" relative="1" as="geometry">
+            <mxPoint x="840" y="250" as="sourcePoint" />
+            <mxPoint x="325" y="300" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+
+        <mxCell id="arrow3" value="" style="endArrow=classic;html=1;rounded=0;exitX=0.5;exitY=1;exitDx=0;exitDy=0;entryX=0.5;entryY=0;entryDx=0;entryDy=0;strokeColor=#232F3E;strokeWidth=2;" edge="1" parent="1" source="control-tower" target="infrastructure-ou">
+          <mxGeometry width="50" height="50" relative="1" as="geometry">
+            <mxPoint x="960" y="250" as="sourcePoint" />
+            <mxPoint x="925" y="300" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+
+        <mxCell id="arrow4" value="" style="endArrow=classic;html=1;rounded=0;exitX=0.8;exitY=1;exitDx=0;exitDy=0;entryX=0.5;entryY=0;entryDx=0;entryDy=0;strokeColor=#232F3E;strokeWidth=2;" edge="1" parent="1" source="control-tower" target="workloads-ou">
+          <mxGeometry width="50" height="50" relative="1" as="geometry">
+            <mxPoint x="1080" y="250" as="sourcePoint" />
+            <mxPoint x="1575" y="300" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+
+        <!-- Transit Gateway connections -->
+        <mxCell id="tgw-arrow1" value="" style="endArrow=classic;html=1;rounded=0;exitX=1;exitY=0.5;exitDx=0;exitDy=0;entryX=0;entryY=0.5;entryDx=0;entryDy=0;strokeColor=#4CAF50;strokeWidth=3;dashed=1;" edge="1" parent="1" source="transit-gateway" target="ml-prod">
+          <mxGeometry width="50" height="50" relative="1" as="geometry">
+            <mxPoint x="780" y="530" as="sourcePoint" />
+            <mxPoint x="1340" y="430" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+
+        <mxCell id="tgw-arrow2" value="" style="endArrow=classic;html=1;rounded=0;exitX=1;exitY=0.5;exitDx=0;exitDy=0;entryX=0;entryY=0.5;entryDx=0;entryDy=0;strokeColor=#4CAF50;strokeWidth=3;dashed=1;" edge="1" parent="1" source="transit-gateway" target="data-prod">
+          <mxGeometry width="50" height="50" relative="1" as="geometry">
+            <mxPoint x="780" y="530" as="sourcePoint" />
+            <mxPoint x="1660" y="430" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+
+        <!-- Data Flow Arrows -->
+        <mxCell id="data-flow1" value="Data Flow" style="endArrow=classic;html=1;rounded=0;exitX=0;exitY=0.5;exitDx=0;exitDy=0;entryX=1;entryY=0.5;entryDx=0;entryDy=0;strokeColor=#FF5722;strokeWidth=2;dashed=1;" edge="1" parent="1" source="data-prod" target="ml-prod">
+          <mxGeometry width="50" height="50" relative="1" as="geometry">
+            <mxPoint x="1660" y="430" as="sourcePoint" />
+            <mxPoint x="1480" y="430" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+
+        <!-- Security Flow -->
+        <mxCell id="security-flow" value="Security &amp; Audit" style="endArrow=classic;html=1;rounded=0;exitX=1;exitY=0.5;exitDx=0;exitDy=0;entryX=0;entryY=0;entryDx=0;entryDy=0;strokeColor=#F44336;strokeWidth=2;dashed=1;" edge="1" parent="1" source="audit-account" target="workloads-ou">
+          <mxGeometry width="50" height="50" relative="1" as="geometry">
+            <mxPoint x="510" y="410" as="sourcePoint" />
+            <mxPoint x="1300" y="300" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+
+        <!-- Shared Services Flow -->
+        <mxCell id="shared-services-flow" value="Shared Services" style="endArrow=classic;html=1;rounded=0;exitX=0.5;exitY=1;exitDx=0;exitDy=0;entryX=0.5;entryY=0;entryDx=0;entryDy=0;strokeColor=#3F51B5;strokeWidth=2;dashed=1;" edge="1" parent="1" source="shared-services" target="shared-services-layer">
+          <mxGeometry width="50" height="50" relative="1" as="geometry">
+            <mxPoint x="910" y="470" as="sourcePoint" />
+            <mxPoint x="925" y="850" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+
+        <!-- Legend -->
+        <mxCell id="legend" value="Legend:&#xa;━━━  Governance Flow&#xa;┅┅┅  Network Connectivity&#xa;┅┅┅  Data Flow&#xa;┅┅┅  Security &amp; Audit&#xa;┅┅┅  Shared Services" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#FAFAFA;strokeColor=#BDBDBD;fontSize=10;align=left;verticalAlign=top;" vertex="1" parent="1">
+          <mxGeometry x="100" y="50" width="150" height="100" as="geometry" />
+        </mxCell>
+
+      </root>
+    </mxGraphModel>
+  </diagram>
+</mxfile>
